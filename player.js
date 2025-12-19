@@ -24,7 +24,6 @@ function playCurrentTrack() {
 
   // Se todas falharam → PARA
   if (failedTracks.size >= playlist.length) {
-    showStatus("Nenhuma faixa válida disponível.");
     audio.pause();
     isPlaying = false;
     return;
