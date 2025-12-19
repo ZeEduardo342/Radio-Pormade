@@ -5,15 +5,6 @@ let isPlaying = false;
 
 const audio = document.getElementById('audio-player');
 const progressBar = document.getElementById('progress-bar');
-const statusMessage = document.getElementById('status-message');
-
-function showStatus(message) {
-  statusMessage.textContent = message;
-  statusMessage.style.display = 'block';
-  setTimeout(() => statusMessage.style.display = 'none', 4000);
-}
-
-
 
 /* ======================
    CONTROLE DE FAIXAS
