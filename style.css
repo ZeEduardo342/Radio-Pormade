@@ -204,3 +204,18 @@ h1 {
     font-size: 0.8em;
     display: none; /* Inicia escondido */
 }
+
+  .btn-player {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #1fa463; /* verde */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: opacity .2s ease;
+  }
+
+  .btn-player:hover {
+    opacity: 0.85;
+  }
