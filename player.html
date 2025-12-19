@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Pormade - Player</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SDKs do Firebase - Necessário para Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <!-- Configuração e Inicialização do Firebase -->
+    <script src="firebase-config.js"></script>
+</head>
+<body class="player-body">
+    <!-- Barra de Progresso (Conceito Visual) -->
+    <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar">
+            <div class="progress-dot"></div>
+        </div>
+    </div>
+
+    <!-- Player de Áudio (Escondido) -->
+    <audio id="audio-player" autoplay></audio>
+
+    <!-- Mensagem de Status/Debug (Opcional, mas útil para feedback) -->
+    <div id="status-message"></div>
+
+    <!-- JavaScript do Player -->
+    <script src="player.js"></script>
+</body>
+</html>

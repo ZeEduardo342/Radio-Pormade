@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Pormade - Administração</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SDKs do Firebase - Necessário para Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <!-- Configuração e Inicialização do Firebase -->
+    <script src="firebase-config.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Administração da Rádio Pormade</h1>
+
+        <!-- Formulário de Adição de Faixa -->
+        <section class="add-track-section">
+            <h2>Adicionar Nova Faixa</h2>
+            <form id="add-track-form">
+                <div>
+                    <label for="dropbox-link">Link do Dropbox (Compartilhamento):</label>
+                    <input type="text" id="dropbox-link" placeholder="Cole o link de compartilhamento do Dropbox aqui" required>
+                </div>
+                <div>
+                    <label for="track-name">Nome da Faixa (Opcional - será gerado automaticamente se vazio):</label>
+                    <input type="text" id="track-name" placeholder="Ex: Faixa 001">
+                </div>
+                <div>
+                    <label for="track-order">Ordem (Opcional - será a próxima se vazio):</label>
+                    <input type="number" id="track-order" placeholder="Ex: 1, 2, 3...">
+                </div>
+                <button type="submit">Adicionar e Converter Link</button>
+            </form>
+            <p id="form-status" style="margin-top: 10px; font-weight: bold;"></p>
+        </section>
+
+        <!-- Tabela de Faixas -->
+        <section class="track-list-section">
+            <h2>Faixas Cadastradas</h2>
+            <table class="track-table">
+                <thead>
+                    <tr>
+                        <th>Ordem</th>
+                        <th>Nome</th>
+                        <th>Status</th>
+                        <th>Link Original</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tracks-list">
+                    <!-- As faixas serão inseridas aqui pelo JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Player de Pré-visualização (Escondido) -->
+    <audio id="preview-player" controls style="display: none;"></audio>
+
+    <!-- JavaScript da Administração -->
+    <script src="admin.js"></script>
+</body>
+</html>
